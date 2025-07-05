@@ -22,4 +22,35 @@
 !.claude/commands/
 !.claude/commands/add-new-resource.md
 
+# Integration directories - private development systems
+integrations/
+integrations/*
+!integrations/
+!integrations/README.md
+!integrations/*/README.md
+
+# TaskMaster integration
+.taskmaster/
+.taskmaster/*
+!.taskmaster/
+!.taskmaster/README.md
+
+# CCS and CCA integration files
+cc_dev/
+cc_dev/*
+!cc_dev/
+!cc_dev/README.md
+
+# Service files and installation scripts (keep for reference)
+# These are development/deployment files, not core repository content
+*.service
+*-services.sh
+setup_*.sh
+test-*.sh
+
 .DS_Store
+
+# Environment files with sensitive data
+.env
+**/.env
+**/secrets.env

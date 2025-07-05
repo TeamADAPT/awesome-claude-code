@@ -1,0 +1,50 @@
+{
+  "name": "cc-dev-atlassian-integration",
+  "version": "1.0.0",
+  "description": "CC Dev Atlassian Ecosystem Integration for automated project lifecycle management",
+  "main": "cc-dev-atlassian-integration.js",
+  "bin": {
+    "cc-dev-atlassian": "./cc-dev-atlassian-integration.js"
+  },
+  "scripts": {
+    "start": "node cc-dev-atlassian-integration.js start",
+    "test": "node cc-dev-atlassian-integration.js test",
+    "dev": "nodemon cc-dev-atlassian-integration.js start",
+    "create-project": "node cc-dev-atlassian-integration.js create-project",
+    "health-check": "curl -f http://localhost:3000/health || exit 1",
+    "lint": "eslint .",
+    "validate-config": "node -e \"require('./config/integration-config').validateConfig(); console.log('✅ Configuration valid')\""
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "express": "^4.18.0",
+    "ws": "^8.14.0",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0",
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "cc-dev",
+    "atlassian",
+    "jira",
+    "confluence", 
+    "jsm",
+    "taskmaster",
+    "integration",
+    "automation",
+    "project-management"
+  ],
+  "author": "PRIME DevOps Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TeamADAPT/cc-dev.git"
+  }
+}
